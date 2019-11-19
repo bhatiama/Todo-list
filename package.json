@@ -1,6 +1,6 @@
 {
   "name": "todo-list",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -43,5 +43,17 @@
     "ts-node": "~7.0.0",
     "tslint": "~5.15.0",
     "typescript": "~3.5.3"
-  }
+  },
+  "description": "The goal of this assignment is to create a simple Todo angular application using the REST APIs.",
+  "main": "karma.conf.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neu-mis-info6150-fall-2019/assignment-9-bhatiama.git"
+  },
+  "author": "Mayur Bhatia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/neu-mis-info6150-fall-2019/assignment-9-bhatiama/issues"
+  },
+  "homepage": "https://github.com/neu-mis-info6150-fall-2019/assignment-9-bhatiama#readme"
 }

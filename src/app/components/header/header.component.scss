@@ -1,0 +1,25 @@
+.header {
+  text-align: center;
+  background: #333;
+  color: #fff;
+
+  .heading {
+    padding-top: 10px;
+  }
+
+  ul {
+    font-size: 20px;
+    margin-left: -20px;
+  }
+
+  ul li{
+    display: inline;
+    padding-bottom: 30px;
+  }
+
+  ul li a {
+    text-decoration: none;
+    color:#fff;
+  }
+
+}
