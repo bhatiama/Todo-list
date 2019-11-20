@@ -1,14 +1,9 @@
   p.todo-items {
-    background: #333;
-    color: #fafafa;
+    background: #f6f6f6;
+    color: #333;
     padding:20px;
     font-size: 16px;
     font-weight: bold;
-  }
-
-  p.todo-items:nth-child(even) {
-    background: #f6f6f6;
-    color: #333;
   }
 
 .del {
@@ -26,9 +21,7 @@
 }
 
 .todo {
-  background: #f4f4f4;
-  padding: 10px;
-  border-bottom: 1px #ccc dotted;
+width: 100%;
 }
 
 .is-complete {
