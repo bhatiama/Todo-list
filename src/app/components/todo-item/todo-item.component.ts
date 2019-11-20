@@ -32,4 +32,8 @@ onToggle(todo) {
     console.log(todo));
 }
 
+onDelete(todo) {
+  this.deleteTodo.emit(todo);
+}
+
 }
