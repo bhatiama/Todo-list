@@ -22,6 +22,13 @@ export class TodoService {
    return this.http.get<Todo[]>(`${this.todosUrl}`);
   }
 
+  // Get Todo item by ID
+  getTodoItemById(todo: Todo): Observable<Todo[]> {
+    const url = `${this.todosUrl}/${todo.id}`;
+    console.log(`${todo.id}`);
+    return this.http.get<Todo[]>(url);
+     }
+
   // Add Todo
   addTodo(todo: Todo): Observable<Todo> {
       return this.http.post<Todo>(this.todosUrl, todo, httpOptions);
@@ -36,7 +43,6 @@ export class TodoService {
   // Delete Todo
   deleteTodo(todo: Todo): Observable<Todo> {
       const url = `${this.todosUrl}/${todo.id}`;
-      console.log(todo.id);
       return this.http.delete<Todo>(url, httpOptions);
     }
 }

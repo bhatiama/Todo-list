@@ -1,0 +1,3 @@
+<app-todo-item
+*ngFor='let todo of todos' [todo]="todo" (getItemById)="getItemById($event)">
+</app-todo-item>

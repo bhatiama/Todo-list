@@ -15,8 +15,11 @@ let todoSchema = new Schema({
     //List description
     description: String,
 
-    //List due date
+    //Item due date
     duedate: Date,
+
+    //Item due Time
+    duetime: String,
 
     //status
     completed: Boolean

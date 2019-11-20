@@ -1,4 +1,5 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Time } from '@angular/common';
 
 @Component({
   selector: 'app-add-todo-item',
@@ -11,6 +12,7 @@ export class AddTodoItemComponent implements OnInit {
   title: string;
   description: string;
   duedate: Date;
+  duetime: Time;
   constructor() { }
 
   ngOnInit() {
@@ -21,6 +23,7 @@ export class AddTodoItemComponent implements OnInit {
       title: this.title,
       description: this.description,
       duedate: this.duedate,
+      duetime: this.duetime,
       completed: false
     };
 

@@ -10,6 +10,8 @@ import { TodoListComponent } from './components/todo-list/todo-list.component';
 import { TodoItemComponent } from './components/todo-item/todo-item.component';
 import { AddTodoItemComponent } from './components/add-todo-item/add-todo-item.component';
 import { AddTodoFormComponent } from './components/add-todo-form/add-todo-form.component';
+import { ItemDetailsComponent } from './components/item-details/item-details.component';
+import { TodoItemDetailsViewComponent } from './components/todo-item-details-view/todo-item-details-view.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { AddTodoFormComponent } from './components/add-todo-form/add-todo-form.c
     TodoListComponent,
     TodoItemComponent,
     AddTodoItemComponent,
-    AddTodoFormComponent
+    AddTodoFormComponent,
+    ItemDetailsComponent,
+    TodoItemDetailsViewComponent
   ],
   imports: [
     BrowserModule,
