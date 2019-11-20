@@ -15,7 +15,6 @@ const httpOptions = {
 })
 export class TodoService {
   todosUrl = 'http://localhost:3000/todo';
-  todosLimit = '?_limit=5';
   constructor(private http: HttpClient) { }
 
   // Get Todos
@@ -37,6 +36,7 @@ export class TodoService {
   // Delete Todo
   deleteTodo(todo: Todo): Observable<Todo> {
       const url = `${this.todosUrl}/${todo.id}`;
+      console.log(todo.id);
       return this.http.delete<Todo>(url, httpOptions);
     }
 }
