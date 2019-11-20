@@ -1,6 +1,6 @@
 <div class="addTodoForm">
-  <form>
-    <label>Title: </label><input type="text">
+  <form (ngSubmit) = "onSubmit()">
+    <label>Title: </label><input type="text" name="title" [(ngModel)]="title" placeholder="Add Todo...">
     <label>Description: </label><textarea></textarea>
     <label>Due Date: </label><input type="date">
     <input type="submit" value="Add">
