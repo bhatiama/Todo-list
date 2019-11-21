@@ -1,7 +1,7 @@
 <div [ngClass]='setClasses()'>
 <p class="todo-items">
   <input (change)="onToggle(todo)" type="checkbox">
-  <a href="#" (click)="getTodoItemById(todo)" routerLink="/item"> {{ todo.title }} </a>
+  <a (click)="getTodoItemById(todo)"> {{ todo.title }} </a>
   <button (click)="onDelete(todo)" class="del">X</button>
 </p>
 </div>

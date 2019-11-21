@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { TodoService } from './../../services/todo.service';
 import { Todo } from 'src/app/models/Todo';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-todo-item',
@@ -9,9 +10,9 @@ import { Todo } from 'src/app/models/Todo';
 })
 export class TodoItemComponent implements OnInit {
   @Input() todo: Todo;
-  @Output() deleteTodo: EventEmitter<Todo> = new EventEmitter();
   @Output() getItemById: EventEmitter<Todo> = new EventEmitter();
-  constructor(private todoService: TodoService) { }
+  @Output() deleteTodo: EventEmitter<Todo> = new EventEmitter();
+  constructor(private todoService: TodoService, private router: Router) { }
 
   ngOnInit() {
   }
@@ -39,6 +40,7 @@ onDelete(todo) {
 
 getTodoItemById(todo) {
   console.log(`${todo.title}`);
+  this.router.navigate(['/item' , todo.id]);
   this.getItemById.emit(todo);
 }
 

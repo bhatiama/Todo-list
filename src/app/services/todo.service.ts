@@ -15,6 +15,7 @@ const httpOptions = {
 })
 export class TodoService {
   todosUrl = 'http://localhost:3000/todo';
+  todos: Todo[];
   constructor(private http: HttpClient) { }
 
   // Get Todos
@@ -23,10 +24,11 @@ export class TodoService {
   }
 
   // Get Todo item by ID
-  getTodoItemById(todo: Todo): Observable<Todo[]> {
-    const url = `${this.todosUrl}/${todo.id}`;
-    console.log(`${todo.id}`);
-    return this.http.get<Todo[]>(url);
+  getTodoItemById(id: string): Observable<Todo[]> {
+    const url = `${this.todosUrl}/${id}`;
+    // let get = this.http.get<Todo[]>(url, httpOptions);
+    // get.subscribe(todos => console.log(todos));
+    return this.http.get<Todo[]>(url, httpOptions);
      }
 
   // Add Todo

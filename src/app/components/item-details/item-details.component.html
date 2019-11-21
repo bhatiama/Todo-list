@@ -1,1 +1,13 @@
-<p>{{ todo.title }}</p>
+<div class="details">
+    <h1>{{ todo.title }}</h1>
+    <p>Description: <span>{{ todo.description }}</span></p>
+    <p>Due Date: <span>{{ todo.duedate | date}}</span></p>
+    <p>Due Time: <span>{{ todo.duetime }}</span></p>
+    <p>Completed: <span>{{ todo.completed }}</span></p>
+
+</div>
+
+
+
+
+

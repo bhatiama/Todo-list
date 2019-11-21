@@ -8,7 +8,7 @@ import { TodoItemDetailsViewComponent } from './components/todo-item-details-vie
 const routes: Routes = [
   { path: '', component: TodoListComponent},
   { path: 'add', component: AddTodoFormComponent},
-  { path: 'item', component: TodoItemDetailsViewComponent}
+  { path: 'item/:id', component: TodoItemDetailsViewComponent}
 ];
 
 @NgModule({

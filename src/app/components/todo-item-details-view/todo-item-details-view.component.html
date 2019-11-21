@@ -1,3 +1,8 @@
-<app-todo-item
-*ngFor='let todo of todos' [todo]="todo" (getItemById)="getItemById($event)">
-</app-todo-item>
+<div class="list">
+    <app-item-details class="items"
+    *ngIf='todos'
+    [todo]="todos"
+    (getItemById)="getItemById($event)"
+    >
+    </app-item-details>
+  </div>
