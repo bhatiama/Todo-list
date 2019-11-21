@@ -13,7 +13,6 @@ export class ItemDetailsComponent implements OnInit {
   constructor(private todoService: TodoService) { }
 
   ngOnInit() {
-    console.log(this.todo.title);
   }
 
 }

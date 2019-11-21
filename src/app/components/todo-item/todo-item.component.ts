@@ -10,7 +10,6 @@ import {Router} from '@angular/router';
 })
 export class TodoItemComponent implements OnInit {
   @Input() todo: Todo;
-  @Output() getItemById: EventEmitter<Todo> = new EventEmitter();
   @Output() deleteTodo: EventEmitter<Todo> = new EventEmitter();
   constructor(private todoService: TodoService, private router: Router) { }
 
@@ -39,9 +38,7 @@ onDelete(todo) {
 }
 
 getTodoItemById(todo) {
-  console.log(`${todo.title}`);
   this.router.navigate(['/item' , todo.id]);
-  this.getItemById.emit(todo);
 }
 
 }

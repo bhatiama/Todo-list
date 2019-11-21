@@ -26,9 +26,7 @@ export class TodoItemDetailsViewComponent implements OnInit {
   }
 
   getItemById(id: string) {
-    console.log('In view');
     this.todoService.getTodoItemById(id).subscribe(todos => {
-      console.log(todos);
       this.todos = todos;
     });
   }
