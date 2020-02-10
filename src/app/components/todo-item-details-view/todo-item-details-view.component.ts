@@ -19,13 +19,20 @@ export class TodoItemDetailsViewComponent implements OnInit {
 
   ngOnInit() {
     // tslint:disable-next-line: deprecation
+    // On page load get the item id from parameter
     this.route.paramMap.subscribe( paramMap =>
       this.id = paramMap.get('id')
   );
     this.getItemById(this.id);
   }
 
-  getItemById(id: string) {
+/**
+ *
+ *
+ * @param {string} id Send todo item to get item by ID method of Todo Service
+ * @memberof TodoItemDetailsViewComponent
+ */
+getItemById(id: string) {
     this.todoService.getTodoItemById(id).subscribe(todos => {
       this.todos = todos;
     });

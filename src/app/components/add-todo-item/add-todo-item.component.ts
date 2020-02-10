@@ -8,7 +8,7 @@ import { Time } from '@angular/common';
 })
 export class AddTodoItemComponent implements OnInit {
   @Output() addTodo: EventEmitter<any> = new EventEmitter();
-
+  // Declare item fields
   title: string;
   description: string;
   duedate: Date;
@@ -18,6 +18,11 @@ export class AddTodoItemComponent implements OnInit {
   ngOnInit() {
   }
 
+  /**
+   *
+   * On Submit set all item details and emit todo item
+   * @memberof AddTodoItemComponent
+   */
   onSubmit() {
     const todo = {
       title: this.title,

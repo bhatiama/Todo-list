@@ -8,7 +8,8 @@ const express = require('express'),
     cors = require('cors');
 
 //connect to database using Mongoose module
-mongoose.connect('mongodb://localhost:27017/todoListDB', { useNewUrlParser: true, useUnifiedTopology: true });
+const connectionString = 'mongodb+srv://bhatiama:Bhatia1302@mayurbhatia-wleus.mongodb.net/test?retryWrites=true&w=majority';
+mongoose.connect(connectionString, { useNewUrlParser: true, useUnifiedTopology: true });
 mongoose.Promise = global.Promise;
 
 app.use(bodyParser.urlencoded({

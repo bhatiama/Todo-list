@@ -13,11 +13,17 @@ export class AddTodoFormComponent implements OnInit {
   constructor(private todoService: TodoService) { }
 
   ngOnInit() {
+    // Load all todo items on page load
     this.todoService.getTodos().subscribe(todos => {
       this.todos = todos;
     });
   }
 
+  /**
+   *
+   * @param {Todo} todo Send todo item to add method of Todo Service
+   * @memberof AddTodoFormComponent
+   */
   addTodo(todo: Todo) {
     this.todoService.addTodo(todo).subscribe(todo => {
       this.todos.push(todo);

@@ -24,19 +24,34 @@ setClasses() {
     };
     return classes;
   }
-
+/**
+ *
+ * @param {*} todo
+ * @memberof TodoItemComponent
+ */
 onToggle(todo) {
-  // Toggle on UI
+  // Toggle complete status on UI
   todo.completed = !todo.completed;
-  // Toggle on Serve
+  // Toggle complete status on Serve
   this.todoService.toggleCompleted(todo).subscribe(todo =>
     console.log(todo));
 }
 
+
+/**
+ *
+ * @param {*} todo
+ * @memberof TodoItemComponent
+ */
 onDelete(todo) {
   this.deleteTodo.emit(todo);
 }
 
+/**
+ *
+ * @param {*} todo
+ * @memberof TodoItemComponent
+ */
 getTodoItemById(todo) {
   this.router.navigate(['/item' , todo.id]);
 }
